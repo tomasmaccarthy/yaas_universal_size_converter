@@ -1,0 +1,20 @@
+%YAML 1.1
+# This file is a Cloud Foundry application manifest.
+# Use it to deploy your yaas_universal_size_converter service to a Cloud Foundry environment.
+# To do so with the Cloud Foundry CLI-tool, execute the following command in this directory:
+#
+#     cf push
+#
+# For more information see:
+# http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html
+---
+applications:
+- name: yaas_universal_size_converter
+  instances: 1
+  memory: 1024M
+  host: yaas_universal_size_converter
+  path: target/yaas_universal_size_converter.war
+  env:
+    # used in logging format and API Console
+    APP_NAME: yaas_universal_size_converter
+    APP_VERSION: 0.0.1-SNAPSHOT
